@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OpenProactiveEventHandlerImpl - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk.events.open_proactive</a>&nbsp;/&nbsp;<a href="./index.html">OpenProactiveEventHandlerImpl</a><br/>
+<br/>
+<h1>OpenProactiveEventHandlerImpl</h1>
+<code><span class="keyword">internal</span> <span class="keyword">class </span><span class="identifier">OpenProactiveEventHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events/-event-handler/index.html"><span class="identifier">EventHandler</span></a><span class="symbol">&lt;</span><a href="../-open-proactive-event-listener/index.html"><span class="identifier">OpenProactiveEventListener</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="../-bridge-open-proactive-event-handler/index.html"><span class="identifier">BridgeOpenProactiveEventHandler</span></a></code>
+<p>Implementation of the open proactive event handler</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Implementation of the open proactive event handler</p>
+<code><span class="identifier">OpenProactiveEventHandlerImpl</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-open-proactive-listener.html">addOpenProactiveListener</a></h4>
+</td>
+<td>
+<p>Adds the given OpenProactiveEventListener to this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addOpenProactiveListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.open_proactive.OpenProactiveEventHandlerImpl$addOpenProactiveListener(com.chat.sdk.events.open_proactive.OpenProactiveEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-open-proactive-event-listener/index.html"><span class="identifier">OpenProactiveEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-open-proactive.html">onOpenProactive</a></h4>
+</td>
+<td>
+<p>Bridge method where the data comes from Javascript. It posted to all listeners on the main thread.</p>
+<code><span class="keyword">fun </span><span class="identifier">onOpenProactive</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.open_proactive.OpenProactiveEventHandlerImpl$onOpenProactive(kotlin.String, kotlin.String)/agent">agent</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.events.open_proactive.OpenProactiveEventHandlerImpl$onOpenProactive(kotlin.String, kotlin.String)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-open-proactive-listener.html">removeOpenProactiveListener</a></h4>
+</td>
+<td>
+<p>Removes the given OpenProactiveEventListener from this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeOpenProactiveListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.open_proactive.OpenProactiveEventHandlerImpl$removeOpenProactiveListener(com.chat.sdk.events.open_proactive.OpenProactiveEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-open-proactive-event-listener/index.html"><span class="identifier">OpenProactiveEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

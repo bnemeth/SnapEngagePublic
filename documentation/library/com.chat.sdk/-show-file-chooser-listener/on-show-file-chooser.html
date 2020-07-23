@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ShowFileChooserListener.onShowFileChooser - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="index.html">ShowFileChooserListener</a>&nbsp;/&nbsp;<a href="./on-show-file-chooser.html">onShowFileChooser</a><br/>
+<br/>
+<h1>onShowFileChooser</h1>
+<a name="com.chat.sdk.ShowFileChooserListener$onShowFileChooser(android.webkit.ValueCallback((kotlin.Array((android.net.Uri)))), android.webkit.WebChromeClient.FileChooserParams)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onShowFileChooser</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ShowFileChooserListener$onShowFileChooser(android.webkit.ValueCallback((kotlin.Array((android.net.Uri)))), android.webkit.WebChromeClient.FileChooserParams)/filePathCallback">filePathCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ShowFileChooserListener$onShowFileChooser(android.webkit.ValueCallback((kotlin.Array((android.net.Uri)))), android.webkit.WebChromeClient.FileChooserParams)/fileChooserParams">fileChooserParams</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebChromeClient/FileChooserParams.html"><span class="identifier">FileChooserParams</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Tell the client to show a file chooser.</p>
+<p>This is called to handle HTML forms with 'file' input type, in response to the
+user pressing the "Select File" button.
+To cancel the request, call filePathCallback.onReceiveValue(null) and
+return {@code true}.</p>
+<h3>Parameters</h3>
+<p><a name="filePathCallback"></a>
+<code>filePathCallback</code> - Invoke this callback to supply the list of paths to files to upload,
+    or {@code null} to cancel. Must only be called if the
+    {@link #onShowFileChooser} implementation returns {@code true}.</p>
+<p><a name="fileChooserParams"></a>
+<code>fileChooserParams</code> - Describes the mode of file chooser to be opened, and options to be
+    used with it.</p>
+<p><strong>Return</strong><br/>
+{@code true} if filePathCallback will be invoked, {@code false} to use default
+    handling.</p>
+</BODY>
+</HTML>

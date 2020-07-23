@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/clear_log"
+        android:id="@+id/mi_clear_log"/>
+    <item
+        android:title="@string/clear_cookies"
+        android:id="@+id/mi_clear_cookies"/>
+    <item
+        android:title="@string/show_configuration"
+        android:id="@+id/mi_configuration" />
+    <item
+        android:title="@string/show_logs"
+        android:id="@+id/mi_log_visibility"/>
+    <item
+        android:title="@string/retry"
+        android:id="@+id/mi_retry"
+        app:showAsAction="always"
+        android:visible="false"/>
+</menu>

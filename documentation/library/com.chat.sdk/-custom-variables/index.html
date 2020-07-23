@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CustomVariables - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="./index.html">CustomVariables</a><br/>
+<br/>
+<h1>CustomVariables</h1>
+<code><span class="keyword">class </span><span class="identifier">CustomVariables</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
+<p>Helper class to provide properly formatted custom javascript variables.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-c-r-e-a-t-o-r/index.html">CREATOR</a></h4>
+</td>
+<td>
+<p>Interface that must be implemented and provided as a public CREATOR field that generates instances of your Parcelable class from a Parcel.</p>
+<code><span class="keyword">companion</span> <span class="keyword">object </span><span class="identifier">CREATOR</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable/Creator.html"><span class="identifier">Creator</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">CustomVariables</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-js-variable/index.html">JsVariable</a></h4>
+</td>
+<td>
+<p>Data class which describe a javascript variable.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">JsVariable</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Primary empty constructor.</p>
+<code><span class="identifier">CustomVariables</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Secondary constructor that initialize this CustomVariables instance with a map content.</p>
+<code><span class="identifier">CustomVariables</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.CustomVariables$<init>(kotlin.collections.Map((kotlin.String, kotlin.Any)))/map">map</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Secondary constructor for @Parcelable interface.</p>
+<code><span class="identifier">CustomVariables</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.CustomVariables$<init>(android.os.Parcel)/parcel">parcel</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcel.html"><span class="identifier">Parcel</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="javascript-variables.html">javascriptVariables</a></h4>
+</td>
+<td>
+<p>Collection that contain the javascript variables.</p>
+<code><span class="keyword">var </span><span class="identifier">javascriptVariables</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="identifier">JsVariable</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="describe-contents.html">describeContents</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">describeContents</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put.html">put</a></h4>
+</td>
+<td>
+<p>Put a javascript variable into this collection.</p>
+<code><span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.CustomVariables$put(kotlin.String, kotlin.Any)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.CustomVariables$put(kotlin.String, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CustomVariables</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put-all.html">putAll</a></h4>
+</td>
+<td>
+<p>Put multiple javascript variables into this collection.</p>
+<code><span class="keyword">fun </span><span class="identifier">putAll</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.CustomVariables$putAll(kotlin.collections.Map((kotlin.String, kotlin.Any)))/map">map</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CustomVariables</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="quotation-mark.html">quotationMark</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">.</span><span class="identifier">quotationMark</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-to-parcel.html">writeToParcel</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">writeToParcel</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.CustomVariables$writeToParcel(android.os.Parcel, kotlin.Int)/parcel">parcel</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcel.html"><span class="identifier">Parcel</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.CustomVariables$writeToParcel(android.os.Parcel, kotlin.Int)/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create-from-parcel.html">createFromParcel</a></h4>
+</td>
+<td>
+<p>Create a new instance of the Parcelable class, instantiating it from the given Parcel whose data had previously been written by Parcelable#writeToParcel.</p>
+<code><span class="keyword">fun </span><span class="identifier">createFromParcel</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.CustomVariables.CREATOR$createFromParcel(android.os.Parcel)/parcel">parcel</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcel.html"><span class="identifier">Parcel</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CustomVariables</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="new-array.html">newArray</a></h4>
+</td>
+<td>
+<p>Create a new array of the Parcelable class.</p>
+<code><span class="keyword">fun </span><span class="identifier">newArray</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.CustomVariables.CREATOR$newArray(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">CustomVariables</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

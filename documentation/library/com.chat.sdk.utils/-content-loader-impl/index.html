@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ContentLoaderImpl - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk.utils</a>&nbsp;/&nbsp;<a href="./index.html">ContentLoaderImpl</a><br/>
+<br/>
+<h1>ContentLoaderImpl</h1>
+<code><span class="keyword">internal</span> <span class="keyword">class </span><span class="identifier">ContentLoaderImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-content-loader/index.html"><span class="identifier">ContentLoader</span></a></code>
+<p>Class to load the predefined chat HTML from the AssetManager and substitute the placeholders based on the given Configuration.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Class to load the predefined chat HTML from the AssetManager and substitute the placeholders based on the given Configuration.</p>
+<code><span class="identifier">ContentLoaderImpl</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.utils.ContentLoaderImpl$<init>(com.chat.sdk.utils.JavascriptVariablesBlockAssembler, kotlin.Function1((kotlin.String, kotlin.Unit)), kotlin.Function1((kotlin.Throwable, kotlin.Unit)))/jsBlockAssembler">jsBlockAssembler</span><span class="symbol">:</span>&nbsp;<a href="../-javascript-variables-block-assembler/index.html"><span class="identifier">JavascriptVariablesBlockAssembler</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.utils.ContentLoaderImpl$<init>(com.chat.sdk.utils.JavascriptVariablesBlockAssembler, kotlin.Function1((kotlin.String, kotlin.Unit)), kotlin.Function1((kotlin.Throwable, kotlin.Unit)))/onContentLoadSuccess">onContentLoadSuccess</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.utils.ContentLoaderImpl$<init>(com.chat.sdk.utils.JavascriptVariablesBlockAssembler, kotlin.Function1((kotlin.String, kotlin.Unit)), kotlin.Function1((kotlin.Throwable, kotlin.Unit)))/onContentLoadFail">onContentLoadFail</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="js-block-assembler.html">jsBlockAssembler</a></h4>
+</td>
+<td>
+<p>utility class to assemble the custom variables javascript block.</p>
+<code><span class="keyword">val </span><span class="identifier">jsBlockAssembler</span><span class="symbol">: </span><a href="../-javascript-variables-block-assembler/index.html"><span class="identifier">JavascriptVariablesBlockAssembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-content-load-fail.html">onContentLoadFail</a></h4>
+</td>
+<td>
+<p>closure that will be invoked if the process failed.</p>
+<code><span class="keyword">val </span><span class="identifier">onContentLoadFail</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-content-load-success.html">onContentLoadSuccess</a></h4>
+</td>
+<td>
+<p>closure that will be invoked if the process was success.</p>
+<code><span class="keyword">val </span><span class="identifier">onContentLoadSuccess</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="load.html">load</a></h4>
+</td>
+<td>
+<p>Starts the load</p>
+<code><span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.utils.ContentLoaderImpl$load(android.content.Context, com.chat.sdk.Chat.Configuration)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.utils.ContentLoaderImpl$load(android.content.Context, com.chat.sdk.Chat.Configuration)/configuration">configuration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Configuration</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-content.html">readContent</a></h4>
+</td>
+<td>
+<p>Reads the raw HTML code from the assets manager.</p>
+<code><span class="keyword">fun </span><span class="identifier">readContent</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.utils.ContentLoaderImpl$readContent(android.content.res.AssetManager)/assetManager">assetManager</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/res/AssetManager.html"><span class="identifier">AssetManager</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="substitute.html">substitute</a></h4>
+</td>
+<td>
+<p>Replaces all the placeholders with the configuration values.</p>
+<code><span class="keyword">fun </span><span class="identifier">substitute</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.utils.ContentLoaderImpl$substitute(kotlin.String, com.chat.sdk.Chat.Configuration)/content">content</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.utils.ContentLoaderImpl$substitute(kotlin.String, com.chat.sdk.Chat.Configuration)/config">config</span><span class="symbol">:</span>&nbsp;<span class="identifier">Configuration</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

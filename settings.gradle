@@ -1,0 +1,3 @@
+rootProject.name='SnapEngage'
+include ':app'
+include ':library'

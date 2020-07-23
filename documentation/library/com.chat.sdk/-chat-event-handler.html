@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChatEventHandler - library</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">library</a>&nbsp;/&nbsp;<a href="index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="./-chat-event-handler.html">ChatEventHandler</a><br/>
+<br/>
+<h1>ChatEventHandler</h1>
+<code><span class="keyword">interface </span><span class="identifier">ChatEventHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.chat.sdk.events.close/-close-event-handler/index.html"><span class="identifier">CloseEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.chat_message_received/-chat-message-received-event-handler/index.html"><span class="identifier">ChatMessageReceivedEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.button/-button-event-handler/index.html"><span class="identifier">ButtonEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-handler/index.html"><span class="identifier">ChatMessageSentEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.message_submit/-message-submit-event-handler/index.html"><span class="identifier">MessageSubmitEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.minimize/-minimize-event-handler/index.html"><span class="identifier">MinimizeEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.open/-open-event-handler/index.html"><span class="identifier">OpenEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.open_proactive/-open-proactive-event-handler/index.html"><span class="identifier">OpenProactiveEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.start_callme/-start-callme-event-handler/index.html"><span class="identifier">StartCallmeEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.start_chat/-start-chat-event-handler/index.html"><span class="identifier">StartChatEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.switch_widget/-switch-widget-event-handler/index.html"><span class="identifier">SwitchWidgetEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.ready/-ready-event-handler/index.html"><span class="identifier">ReadyEventHandler</span></a></code>
+<p>Abstraction of a centralized chat event handler which extends all the event handlers.</p>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-bridge-chat-event-handler/index.html">BridgeChatEventHandler</a></h4>
+</td>
+<td>
+<p>Abstraction of a centralized chat event handler which extends all the event handlers.
+Also register and unregister javascript bridges.</p>
+<code><span class="keyword">interface </span><span class="identifier">BridgeChatEventHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-chat-event-handler.html"><span class="identifier">ChatEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-chat/index.html">Chat</a></h4>
+</td>
+<td>
+<p>Abstraction of the chat. Holds the event handlers, error handler, and javascript actions.</p>
+<code><span class="keyword">interface </span><span class="identifier">Chat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-chat-event-handler.html"><span class="identifier">ChatEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.error_handling/-error-handler/index.html"><span class="identifier">ErrorHandler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

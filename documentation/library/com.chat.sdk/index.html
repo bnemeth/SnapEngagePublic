@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.chat.sdk - library</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">library</a>&nbsp;/&nbsp;<a href="./index.html">com.chat.sdk</a><br/>
+<br/>
+<h2>Package com.chat.sdk</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-bridge-chat-event-handler/index.html">BridgeChatEventHandler</a></h4>
+</td>
+<td>
+<p>Abstraction of a centralized chat event handler which extends all the event handlers.
+Also register and unregister javascript bridges.</p>
+<code><span class="keyword">interface </span><span class="identifier">BridgeChatEventHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-chat-event-handler.html"><span class="identifier">ChatEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-bridge-chat-event-handler-impl/index.html">BridgeChatEventHandlerImpl</a></h4>
+</td>
+<td>
+<p>Implementation of a centralized event handler holder.</p>
+<code><span class="keyword">class </span><span class="identifier">BridgeChatEventHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-bridge-chat-event-handler/index.html"><span class="identifier">BridgeChatEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.close/-close-event-handler/index.html"><span class="identifier">CloseEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.chat_message_received/-chat-message-received-event-handler/index.html"><span class="identifier">ChatMessageReceivedEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.button/-button-event-handler/index.html"><span class="identifier">ButtonEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-handler/index.html"><span class="identifier">ChatMessageSentEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.message_submit/-message-submit-event-handler/index.html"><span class="identifier">MessageSubmitEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.minimize/-minimize-event-handler/index.html"><span class="identifier">MinimizeEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.open/-open-event-handler/index.html"><span class="identifier">OpenEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.open_proactive/-open-proactive-event-handler/index.html"><span class="identifier">OpenProactiveEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.start_callme/-start-callme-event-handler/index.html"><span class="identifier">StartCallmeEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.start_chat/-start-chat-event-handler/index.html"><span class="identifier">StartChatEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.switch_widget/-switch-widget-event-handler/index.html"><span class="identifier">SwitchWidgetEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.ready/-ready-event-handler/index.html"><span class="identifier">ReadyEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-chat/index.html">Chat</a></h4>
+</td>
+<td>
+<p>Abstraction of the chat. Holds the event handlers, error handler, and javascript actions.</p>
+<code><span class="keyword">interface </span><span class="identifier">Chat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-chat-event-handler.html"><span class="identifier">ChatEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.error_handling/-error-handler/index.html"><span class="identifier">ErrorHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-chat-event-handler.html">ChatEventHandler</a></h4>
+</td>
+<td>
+<p>Abstraction of a centralized chat event handler which extends all the event handlers.</p>
+<code><span class="keyword">interface </span><span class="identifier">ChatEventHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.chat.sdk.events.close/-close-event-handler/index.html"><span class="identifier">CloseEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.chat_message_received/-chat-message-received-event-handler/index.html"><span class="identifier">ChatMessageReceivedEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.button/-button-event-handler/index.html"><span class="identifier">ButtonEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-handler/index.html"><span class="identifier">ChatMessageSentEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.message_submit/-message-submit-event-handler/index.html"><span class="identifier">MessageSubmitEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.minimize/-minimize-event-handler/index.html"><span class="identifier">MinimizeEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.open/-open-event-handler/index.html"><span class="identifier">OpenEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.open_proactive/-open-proactive-event-handler/index.html"><span class="identifier">OpenProactiveEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.start_callme/-start-callme-event-handler/index.html"><span class="identifier">StartCallmeEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.start_chat/-start-chat-event-handler/index.html"><span class="identifier">StartChatEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.switch_widget/-switch-widget-event-handler/index.html"><span class="identifier">SwitchWidgetEventHandler</span></a><span class="symbol">, </span><a href="../com.chat.sdk.events.ready/-ready-event-handler/index.html"><span class="identifier">ReadyEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-chat-view/index.html">ChatView</a></h4>
+</td>
+<td>
+<p>Wrapper view that hides the real implementation from the user and prevent to do any change on it.</p>
+<code><span class="keyword">class </span><span class="identifier">ChatView</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/widget/FrameLayout.html"><span class="identifier">FrameLayout</span></a><span class="symbol">, </span><a href="-chat/index.html"><span class="identifier">Chat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-chat-web-view/index.html">ChatWebView</a></h4>
+</td>
+<td>
+<p>Internal view that responsible for to display the chat and the communication between the javascript library and the android app with bridge objects. Also delegates the events to the corresponding objects.</p>
+<code><span class="keyword">class </span><span class="identifier">ChatWebView</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebView.html"><span class="identifier">WebView</span></a><span class="symbol">, </span><a href="-chat/index.html"><span class="identifier">Chat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-chat-web-view-client/index.html">ChatWebViewClient</a></h4>
+</td>
+<td>
+<p>WebViewClient class to handle errors and to perform navigation on link clicks.</p>
+<code><span class="keyword">class </span><span class="identifier">ChatWebViewClient</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebViewClient.html"><span class="identifier">WebViewClient</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-custom-variables/index.html">CustomVariables</a></h4>
+</td>
+<td>
+<p>Helper class to provide properly formatted custom javascript variables.</p>
+<code><span class="keyword">class </span><span class="identifier">CustomVariables</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-javascript-action/index.html">JavascriptAction</a></h4>
+</td>
+<td>
+<p>Class that stores a pending javascript action.</p>
+<code><span class="keyword">class </span><span class="identifier">JavascriptAction</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-show-file-chooser-listener/index.html">ShowFileChooserListener</a></h4>
+</td>
+<td>
+<p>Listener to create file chooser</p>
+<code><span class="keyword">interface </span><span class="identifier">ShowFileChooserListener</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="kotlin.-function1/index.html">kotlin.Function1</a></h4>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="clear-all-cookies.html">clearAllCookies</a></h4>
+</td>
+<td>
+<p>Clears the cookies, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">clearAllCookies</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$clearAllCookies(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hide-button.html">hideButton</a></h4>
+</td>
+<td>
+<p>Hides the chat button, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">hideButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$hideButton(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="show-button.html">showButton</a></h4>
+</td>
+<td>
+<p>Show the chat button, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">showButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$showButton(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-link.html">startLink</a></h4>
+</td>
+<td>
+<p>Shows the chat view, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">startLink</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$startLink(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

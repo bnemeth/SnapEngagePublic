@@ -1,0 +1,20 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:com.chat.sdk$asValueCallback(kotlin.Function1((kotlin.String, kotlin.Unit)))com.chat.sdk/kotlin.-function1/as-value-callback.html
+com.chat.sdk
+com.chat.sdk.error_handling
+com.chat.sdk.events
+com.chat.sdk.events.button
+com.chat.sdk.events.chat_message_received
+com.chat.sdk.events.chat_message_sent
+com.chat.sdk.events.close
+com.chat.sdk.events.message_submit
+com.chat.sdk.events.minimize
+com.chat.sdk.events.open
+com.chat.sdk.events.open_proactive
+com.chat.sdk.events.ready
+com.chat.sdk.events.start_callme
+com.chat.sdk.events.start_chat
+com.chat.sdk.events.switch_widget
+com.chat.sdk.networking
+com.chat.sdk.utils

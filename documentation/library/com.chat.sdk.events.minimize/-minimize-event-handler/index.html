@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MinimizeEventHandler - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk.events.minimize</a>&nbsp;/&nbsp;<a href="./index.html">MinimizeEventHandler</a><br/>
+<br/>
+<h1>MinimizeEventHandler</h1>
+<code><span class="keyword">interface </span><span class="identifier">MinimizeEventHandler</span></code>
+<p>Abstraction of the open event handler.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-minimize-listener.html">addMinimizeListener</a></h4>
+</td>
+<td>
+<p>Adds the given MinimizeEventListener to this handler.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addMinimizeListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.minimize.MinimizeEventHandler$addMinimizeListener(com.chat.sdk.events.minimize.MinimizeEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-minimize-event-listener/index.html"><span class="identifier">MinimizeEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-minimize-listener.html">removeMinimizeListener</a></h4>
+</td>
+<td>
+<p>Removes the given MinimizeEventListener from this handler.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">removeMinimizeListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.minimize.MinimizeEventHandler$removeMinimizeListener(com.chat.sdk.events.minimize.MinimizeEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-minimize-event-listener/index.html"><span class="identifier">MinimizeEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../com.chat.sdk/-bridge-chat-event-handler-impl/index.html">BridgeChatEventHandlerImpl</a></h4>
+</td>
+<td>
+<p>Implementation of a centralized event handler holder.</p>
+<code><span class="keyword">class </span><span class="identifier">BridgeChatEventHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk/-bridge-chat-event-handler/index.html"><span class="identifier">BridgeChatEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.close/-close-event-handler/index.html"><span class="identifier">CloseEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.chat_message_received/-chat-message-received-event-handler/index.html"><span class="identifier">ChatMessageReceivedEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.button/-button-event-handler/index.html"><span class="identifier">ButtonEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-handler/index.html"><span class="identifier">ChatMessageSentEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.message_submit/-message-submit-event-handler/index.html"><span class="identifier">MessageSubmitEventHandler</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">MinimizeEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.open/-open-event-handler/index.html"><span class="identifier">OpenEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.open_proactive/-open-proactive-event-handler/index.html"><span class="identifier">OpenProactiveEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.start_callme/-start-callme-event-handler/index.html"><span class="identifier">StartCallmeEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.start_chat/-start-chat-event-handler/index.html"><span class="identifier">StartChatEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.switch_widget/-switch-widget-event-handler/index.html"><span class="identifier">SwitchWidgetEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.ready/-ready-event-handler/index.html"><span class="identifier">ReadyEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-bridge-minimize-event-handler/index.html">BridgeMinimizeEventHandler</a></h4>
+</td>
+<td>
+<p>MinimizeEventHandler interface with javascript bridge abstraction.</p>
+<code><span class="keyword">interface </span><span class="identifier">BridgeMinimizeEventHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MinimizeEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../com.chat.sdk/-chat-event-handler.html">ChatEventHandler</a></h4>
+</td>
+<td>
+<p>Abstraction of a centralized chat event handler which extends all the event handlers.</p>
+<code><span class="keyword">interface </span><span class="identifier">ChatEventHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.close/-close-event-handler/index.html"><span class="identifier">CloseEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.chat_message_received/-chat-message-received-event-handler/index.html"><span class="identifier">ChatMessageReceivedEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.button/-button-event-handler/index.html"><span class="identifier">ButtonEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-handler/index.html"><span class="identifier">ChatMessageSentEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.message_submit/-message-submit-event-handler/index.html"><span class="identifier">MessageSubmitEventHandler</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">MinimizeEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.open/-open-event-handler/index.html"><span class="identifier">OpenEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.open_proactive/-open-proactive-event-handler/index.html"><span class="identifier">OpenProactiveEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.start_callme/-start-callme-event-handler/index.html"><span class="identifier">StartCallmeEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.start_chat/-start-chat-event-handler/index.html"><span class="identifier">StartChatEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.switch_widget/-switch-widget-event-handler/index.html"><span class="identifier">SwitchWidgetEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.ready/-ready-event-handler/index.html"><span class="identifier">ReadyEventHandler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChatView - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="./index.html">ChatView</a><br/>
+<br/>
+<h1>ChatView</h1>
+<code><span class="keyword">class </span><span class="identifier">ChatView</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/widget/FrameLayout.html"><span class="identifier">FrameLayout</span></a><span class="symbol">, </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a></code>
+<p>Wrapper view that hides the real implementation from the user and prevent to do any change on it.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">ChatView</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatView$<init>(android.content.Context, android.util.AttributeSet)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatView$<init>(android.content.Context, android.util.AttributeSet)/attributeSet">attributeSet</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/util/AttributeSet.html"><span class="identifier">AttributeSet</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Wrapper view that hides the real implementation from the user and prevent to do any change on it.</p>
+<code><span class="identifier">ChatView</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatView$<init>(android.content.Context, android.util.AttributeSet, com.chat.sdk.ChatWebView)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatView$<init>(android.content.Context, android.util.AttributeSet, com.chat.sdk.ChatWebView)/attributeSet">attributeSet</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/util/AttributeSet.html"><span class="identifier">AttributeSet</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatView$<init>(android.content.Context, android.util.AttributeSet, com.chat.sdk.ChatWebView)/chat">chat</span><span class="symbol">:</span>&nbsp;<a href="../-chat-web-view/index.html"><span class="identifier">ChatWebView</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="chat.html">chat</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">chat</span><span class="symbol">: </span><a href="../-chat-web-view/index.html"><span class="identifier">ChatWebView</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../clear-all-cookies.html">clearAllCookies</a></h4>
+</td>
+<td>
+<p>Clears the cookies, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">clearAllCookies</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$clearAllCookies(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../hide-button.html">hideButton</a></h4>
+</td>
+<td>
+<p>Hides the chat button, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">hideButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$hideButton(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../show-button.html">showButton</a></h4>
+</td>
+<td>
+<p>Show the chat button, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">showButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$showButton(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../start-link.html">startLink</a></h4>
+</td>
+<td>
+<p>Shows the chat view, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">startLink</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$startLink(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

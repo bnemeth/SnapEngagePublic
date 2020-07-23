@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/widgetIdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/widget_id"
+                android:text="@string/widget_id_snapengage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/providerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/provider"
+                android:text="@string/provider_snapengage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/baseJavascriptUrlView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/base_javascript_url"
+                android:text="@string/base_javascript_url_snapengage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/baseInstanceUrlView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/base_instance_url"
+                android:text="@string/base_instance_url_snapengage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/entryPageUrlView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/entry_page_url"
+                android:text="@string/entry_page_url_example" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_variables" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customVariablesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addBooleanVariableView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Boolean" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addDoubleVariableView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Double" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addIntVariableView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Int" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addStringVariableView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ String" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="@string/save"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

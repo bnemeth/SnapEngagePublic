@@ -1,0 +1,508 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChatWebView - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="./index.html">ChatWebView</a><br/>
+<br/>
+<h1>ChatWebView</h1>
+<code><span class="keyword">internal</span> <span class="keyword">class </span><span class="identifier">ChatWebView</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebView.html"><span class="identifier">WebView</span></a><span class="symbol">, </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a></code>
+<p>Internal view that responsible for to display the chat and the communication between the javascript library and the android app with bridge objects. Also delegates the events to the corresponding objects.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Internal view that responsible for to display the chat and the communication between the javascript library and the android app with bridge objects. Also delegates the events to the corresponding objects.</p>
+<code><span class="identifier">ChatWebView</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="configuration.html">configuration</a></h4>
+</td>
+<td>
+<p>This variable stores the current configuration</p>
+<code><span class="keyword">var </span><span class="identifier">configuration</span><span class="symbol">: </span><span class="identifier">Configuration</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="configuration-validator.html">configurationValidator</a></h4>
+</td>
+<td>
+<p>Validator for configurations.</p>
+<code><span class="keyword">val </span><span class="identifier">configurationValidator</span><span class="symbol">: </span><a href="../../com.chat.sdk.utils/-configuration-validator/index.html"><span class="identifier">ConfigurationValidator</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="content-loader.html">contentLoader</a></h4>
+</td>
+<td>
+<p>This object is responsible to load the local HTML code, and replace some placeholders with correct values.</p>
+<code><span class="keyword">val </span><span class="identifier">contentLoader</span><span class="symbol">: </span><a href="../../com.chat.sdk.utils/-content-loader/index.html"><span class="identifier">ContentLoader</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="error-handler.html">errorHandler</a></h4>
+</td>
+<td>
+<p>This object is responsible for the error handling.</p>
+<code><span class="keyword">val </span><span class="identifier">errorHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.error_handling/-notifiable-error-handler/index.html"><span class="identifier">NotifiableErrorHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="event-handler.html">eventHandler</a></h4>
+</td>
+<td>
+<p>This object is responsible to handle the communication between the javascript and android.</p>
+<code><span class="keyword">val </span><span class="identifier">eventHandler</span><span class="symbol">: </span><a href="../-bridge-chat-event-handler/index.html"><span class="identifier">BridgeChatEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-ready.html">isReady</a></h4>
+</td>
+<td>
+<p>This variable represents that the chat has been loaded and ready to evaluate javascripts.</p>
+<code><span class="keyword">var </span><span class="identifier">isReady</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pending-javascript-actions.html">pendingJavascriptActions</a></h4>
+</td>
+<td>
+<p>List of javascript actions that has been called before the view was ready.</p>
+<code><span class="keyword">val </span><span class="identifier">pendingJavascriptActions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../-javascript-action/index.html"><span class="identifier">JavascriptAction</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="provider.html">provider</a></h4>
+</td>
+<td>
+<p>Computed field to get the current provider or empty string if not set.</p>
+<code><span class="keyword">val </span><span class="identifier">provider</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="show-file-chooser-listener.html">showFileChooserListener</a></h4>
+</td>
+<td>
+<p>List of javascript actions that has been called before the view was ready.</p>
+<code><span class="keyword">var </span><span class="identifier">showFileChooserListener</span><span class="symbol">: </span><a href="../-show-file-chooser-listener/index.html"><span class="identifier">ShowFileChooserListener</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="widget-availability-provider.html">widgetAvailabilityProvider</a></h4>
+</td>
+<td>
+<p>Widget availability provider</p>
+<code><span class="keyword">val </span><span class="identifier">widgetAvailabilityProvider</span><span class="symbol">: </span><a href="../../com.chat.sdk.networking/-widget-availability-provider/index.html"><span class="identifier">WidgetAvailabilityProvider</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-button-event-listener.html">addButtonEventListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a ButtonEventListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addButtonEventListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addButtonEventListener(com.chat.sdk.events.button.ButtonEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.button/-button-event-listener/index.html"><span class="identifier">ButtonEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-chat-message-received-listener.html">addChatMessageReceivedListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a ChatMessageReceivedEventListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addChatMessageReceivedListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addChatMessageReceivedListener(com.chat.sdk.events.chat_message_received.ChatMessageReceivedEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.chat_message_received/-chat-message-received-event-listener/index.html"><span class="identifier">ChatMessageReceivedEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-chat-message-sent-listener.html">addChatMessageSentListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a ChatMessageSentListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addChatMessageSentListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addChatMessageSentListener(com.chat.sdk.events.chat_message_sent.ChatMessageSentEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-listener/index.html"><span class="identifier">ChatMessageSentEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-close-listener.html">addCloseListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a CloseEventListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addCloseListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addCloseListener(com.chat.sdk.events.close.CloseEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.close/-close-event-listener/index.html"><span class="identifier">CloseEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-error-listener.html">addErrorListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds an ErrorListener to the errorHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addErrorListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addErrorListener(com.chat.sdk.error_handling.ErrorListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.error_handling/-error-listener/index.html"><span class="identifier">ErrorListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-message-submit-listener.html">addMessageSubmitListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a MessageSubmitListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addMessageSubmitListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addMessageSubmitListener(com.chat.sdk.events.message_submit.MessageSubmitEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.message_submit/-message-submit-event-listener/index.html"><span class="identifier">MessageSubmitEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-minimize-listener.html">addMinimizeListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a MinimizeListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addMinimizeListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addMinimizeListener(com.chat.sdk.events.minimize.MinimizeEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.minimize/-minimize-event-listener/index.html"><span class="identifier">MinimizeEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-open-listener.html">addOpenListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds an OpenListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addOpenListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addOpenListener(com.chat.sdk.events.open.OpenEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.open/-open-event-listener/index.html"><span class="identifier">OpenEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-open-proactive-listener.html">addOpenProactiveListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds an OpenProactiveListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addOpenProactiveListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addOpenProactiveListener(com.chat.sdk.events.open_proactive.OpenProactiveEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.open_proactive/-open-proactive-event-listener/index.html"><span class="identifier">OpenProactiveEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-ready-event-listener.html">addReadyEventListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a ReadyEventListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addReadyEventListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addReadyEventListener(com.chat.sdk.events.ready.ReadyEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.ready/-ready-event-listener/index.html"><span class="identifier">ReadyEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-start-call-me-listener.html">addStartCallMeListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a StartCallMeListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addStartCallMeListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addStartCallMeListener(com.chat.sdk.events.start_callme.StartCallmeEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.start_callme/-start-callme-event-listener/index.html"><span class="identifier">StartCallmeEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-start-chat-listener.html">addStartChatListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a StartChatListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addStartChatListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addStartChatListener(com.chat.sdk.events.start_chat.StartChatEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.start_chat/-start-chat-event-listener/index.html"><span class="identifier">StartChatEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-switch-widget-listener.html">addSwitchWidgetListener</a></h4>
+</td>
+<td>
+<p>Delegated method that adds a SwitchWidgetListener to the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addSwitchWidgetListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$addSwitchWidgetListener(com.chat.sdk.events.switch_widget.SwitchWidgetEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.switch_widget/-switch-widget-event-listener/index.html"><span class="identifier">SwitchWidgetEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="check-widget-availability.html">checkWidgetAvailability</a></h4>
+</td>
+<td>
+<p>Check the current widget availability</p>
+<code><span class="keyword">fun </span><span class="identifier">checkWidgetAvailability</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.chat.sdk.networking/-widget-availability/index.html"><span class="identifier">WidgetAvailability</span></a></code>
+<p>Check widget availability</p>
+<code><span class="keyword">fun </span><span class="identifier">checkWidgetAvailability</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$checkWidgetAvailability(kotlin.String)/widgetId">widgetId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.chat.sdk.networking/-widget-availability/index.html"><span class="identifier">WidgetAvailability</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="clear-all-cookies.html">clearAllCookies</a></h4>
+</td>
+<td>
+<p>Method to clear cookies.</p>
+<code><span class="keyword">fun </span><span class="identifier">clearAllCookies</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$clearAllCookies(android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="evaluate-or-save-javascript.html">evaluateOrSaveJavascript</a></h4>
+</td>
+<td>
+<p>This method evaluates a javascript code and invokes the given resultcallback (if present). If the view is not ready the javascript and the callback will be added to the pending actions, and will be invoked after the view is ready.</p>
+<code><span class="keyword">fun </span><span class="identifier">evaluateOrSaveJavascript</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$evaluateOrSaveJavascript(kotlin.String, android.webkit.ValueCallback((kotlin.String)))/javascript">javascript</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatWebView$evaluateOrSaveJavascript(kotlin.String, android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="evaluate-pending-javascripts.html">evaluatePendingJavascripts</a></h4>
+</td>
+<td>
+<p>Evaluates all pending javascripts and clears the list.</p>
+<code><span class="keyword">fun </span><span class="identifier">evaluatePendingJavascripts</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hide-button.html">hideButton</a></h4>
+</td>
+<td>
+<p>Method to hide the chat button.</p>
+<code><span class="keyword">fun </span><span class="identifier">hideButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$hideButton(android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="notify-internal-error.html">notifyInternalError</a></h4>
+</td>
+<td>
+<p>Notify internal error on main thread</p>
+<code><span class="keyword">fun </span><span class="identifier">notifyInternalError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$notifyInternalError(com.chat.sdk.error_handling.InternalException)/exception">exception</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.error_handling/-internal-exception/index.html"><span class="identifier">InternalException</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="notify-network-error.html">notifyNetworkError</a></h4>
+</td>
+<td>
+<p>Notify network error on main thread</p>
+<code><span class="keyword">fun </span><span class="identifier">notifyNetworkError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$notifyNetworkError(com.chat.sdk.error_handling.NetworkException)/exception">exception</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.error_handling/-network-exception/index.html"><span class="identifier">NetworkException</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-content-load-fail.html">onContentLoadFail</a></h4>
+</td>
+<td>
+<p>Callback method that invokes if there was an error in HTML code loading.</p>
+<code><span class="keyword">fun </span><span class="identifier">onContentLoadFail</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$onContentLoadFail(kotlin.Throwable)/throwable">throwable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-content-load-success.html">onContentLoadSuccess</a></h4>
+</td>
+<td>
+<p>Callback method that invokes after the local HTML code has been loaded successfully.</p>
+<code><span class="keyword">fun </span><span class="identifier">onContentLoadSuccess</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$onContentLoadSuccess(kotlin.String)/html">html</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-load-error.html">onLoadError</a></h4>
+</td>
+<td>
+<p>A WebViewClient callback that triggers when an error occurred.</p>
+<code><span class="keyword">fun </span><span class="identifier">onLoadError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$onLoadError(kotlin.Int, kotlin.String, kotlin.String)/errorCode">errorCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatWebView$onLoadError(kotlin.Int, kotlin.String, kotlin.String)/failingUrl">failingUrl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatWebView$onLoadError(kotlin.Int, kotlin.String, kotlin.String)/descriptor">descriptor</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="register-js-interfaces.html">registerJsInterfaces</a></h4>
+</td>
+<td>
+<p>This method registers all the javascript bridge objects.</p>
+<code><span class="keyword">fun </span><span class="identifier">registerJsInterfaces</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reload.html">reload</a></h4>
+</td>
+<td>
+<p>Method to reload the view.</p>
+<code><span class="keyword">fun </span><span class="identifier">reload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-button-event-listener.html">removeButtonEventListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a ButtonEventListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeButtonEventListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeButtonEventListener(com.chat.sdk.events.button.ButtonEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.button/-button-event-listener/index.html"><span class="identifier">ButtonEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-chat-message-received-listener.html">removeChatMessageReceivedListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a ChatMessageReceivedEventListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeChatMessageReceivedListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeChatMessageReceivedListener(com.chat.sdk.events.chat_message_received.ChatMessageReceivedEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.chat_message_received/-chat-message-received-event-listener/index.html"><span class="identifier">ChatMessageReceivedEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-chat-message-sent-listener.html">removeChatMessageSentListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a ChatMessageSentListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeChatMessageSentListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeChatMessageSentListener(com.chat.sdk.events.chat_message_sent.ChatMessageSentEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-listener/index.html"><span class="identifier">ChatMessageSentEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-close-listener.html">removeCloseListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a CloseEventListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeCloseListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeCloseListener(com.chat.sdk.events.close.CloseEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.close/-close-event-listener/index.html"><span class="identifier">CloseEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-error-listener.html">removeErrorListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes an ErrorListener from the errorHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeErrorListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeErrorListener(com.chat.sdk.error_handling.ErrorListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.error_handling/-error-listener/index.html"><span class="identifier">ErrorListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-message-submit-listener.html">removeMessageSubmitListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a MessageSubmitListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeMessageSubmitListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeMessageSubmitListener(com.chat.sdk.events.message_submit.MessageSubmitEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.message_submit/-message-submit-event-listener/index.html"><span class="identifier">MessageSubmitEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-minimize-listener.html">removeMinimizeListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a MinimizeListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeMinimizeListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeMinimizeListener(com.chat.sdk.events.minimize.MinimizeEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.minimize/-minimize-event-listener/index.html"><span class="identifier">MinimizeEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-open-listener.html">removeOpenListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes an OpenListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeOpenListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeOpenListener(com.chat.sdk.events.open.OpenEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.open/-open-event-listener/index.html"><span class="identifier">OpenEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-open-proactive-listener.html">removeOpenProactiveListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes an OpenProactiveListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeOpenProactiveListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeOpenProactiveListener(com.chat.sdk.events.open_proactive.OpenProactiveEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.open_proactive/-open-proactive-event-listener/index.html"><span class="identifier">OpenProactiveEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-ready-event-listener.html">removeReadyEventListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a ReadyEventListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeReadyEventListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeReadyEventListener(com.chat.sdk.events.ready.ReadyEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.ready/-ready-event-listener/index.html"><span class="identifier">ReadyEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-start-call-me-listener.html">removeStartCallMeListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a StartCallMeListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeStartCallMeListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeStartCallMeListener(com.chat.sdk.events.start_callme.StartCallmeEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.start_callme/-start-callme-event-listener/index.html"><span class="identifier">StartCallmeEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-start-chat-listener.html">removeStartChatListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a StartChatListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeStartChatListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeStartChatListener(com.chat.sdk.events.start_chat.StartChatEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.start_chat/-start-chat-event-listener/index.html"><span class="identifier">StartChatEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-switch-widget-listener.html">removeSwitchWidgetListener</a></h4>
+</td>
+<td>
+<p>Delegated method that removes a SwitchWidgetListener from the eventHandler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeSwitchWidgetListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$removeSwitchWidgetListener(com.chat.sdk.events.switch_widget.SwitchWidgetEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.switch_widget/-switch-widget-event-listener/index.html"><span class="identifier">SwitchWidgetEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-configuration.html">setConfiguration</a></h4>
+</td>
+<td>
+<p>Setter to load a specific configuration to this View.</p>
+<code><span class="keyword">fun </span><span class="identifier">setConfiguration</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$setConfiguration(com.chat.sdk.Chat.Configuration)/configuration">configuration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Configuration</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-internal-listeners.html">setInternalListeners</a></h4>
+</td>
+<td>
+<p>Internal listeners to set internal states correctly.</p>
+<code><span class="keyword">fun </span><span class="identifier">setInternalListeners</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-show-file-chooser-listener.html">setShowFileChooserListener</a></h4>
+</td>
+<td>
+<p>Set ShowFileChooserListener</p>
+<code><span class="keyword">fun </span><span class="identifier">setShowFileChooserListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$setShowFileChooserListener(com.chat.sdk.ShowFileChooserListener)/showFileChooserListener">showFileChooserListener</span><span class="symbol">:</span>&nbsp;<a href="../-show-file-chooser-listener/index.html"><span class="identifier">ShowFileChooserListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="setup.html">setup</a></h4>
+</td>
+<td>
+<p>WebView initialization. Allows cookies, javascripts, and register javascript bridge objects.</p>
+<code><span class="keyword">fun </span><span class="identifier">setup</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="show-button.html">showButton</a></h4>
+</td>
+<td>
+<p>Method to show the chat button.</p>
+<code><span class="keyword">fun </span><span class="identifier">showButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$showButton(android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-link.html">startLink</a></h4>
+</td>
+<td>
+<p>Method to show the chat view.</p>
+<code><span class="keyword">fun </span><span class="identifier">startLink</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebView$startLink(android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../clear-all-cookies.html">clearAllCookies</a></h4>
+</td>
+<td>
+<p>Clears the cookies, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">clearAllCookies</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$clearAllCookies(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../hide-button.html">hideButton</a></h4>
+</td>
+<td>
+<p>Hides the chat button, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">hideButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$hideButton(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../show-button.html">showButton</a></h4>
+</td>
+<td>
+<p>Show the chat button, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">showButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$showButton(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../start-link.html">startLink</a></h4>
+</td>
+<td>
+<p>Shows the chat view, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="../-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">startLink</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$startLink(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

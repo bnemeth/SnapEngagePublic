@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OpenEventHandlerImpl - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk.events.open</a>&nbsp;/&nbsp;<a href="./index.html">OpenEventHandlerImpl</a><br/>
+<br/>
+<h1>OpenEventHandlerImpl</h1>
+<code><span class="keyword">internal</span> <span class="keyword">class </span><span class="identifier">OpenEventHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events/-event-handler/index.html"><span class="identifier">EventHandler</span></a><span class="symbol">&lt;</span><a href="../-open-event-listener/index.html"><span class="identifier">OpenEventListener</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="../-bridge-open-event-handler/index.html"><span class="identifier">BridgeOpenEventHandler</span></a></code>
+<p>Implementation of the open event handler.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Implementation of the open event handler.</p>
+<code><span class="identifier">OpenEventHandlerImpl</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-open-listener.html">addOpenListener</a></h4>
+</td>
+<td>
+<p>Adds the given OpenEventListener to this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addOpenListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.open.OpenEventHandlerImpl$addOpenListener(com.chat.sdk.events.open.OpenEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-open-event-listener/index.html"><span class="identifier">OpenEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-open.html">onOpen</a></h4>
+</td>
+<td>
+<p>Bridge method where the data comes from Javascript. It posted to all listeners on the main thread.</p>
+<code><span class="keyword">fun </span><span class="identifier">onOpen</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.open.OpenEventHandlerImpl$onOpen(kotlin.String)/status">status</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-open-listener.html">removeOpenListener</a></h4>
+</td>
+<td>
+<p>Removes the given OpenEventListener from this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeOpenListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.open.OpenEventHandlerImpl$removeOpenListener(com.chat.sdk.events.open.OpenEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-open-event-listener/index.html"><span class="identifier">OpenEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

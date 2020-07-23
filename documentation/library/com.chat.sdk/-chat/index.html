@@ -1,0 +1,169 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Chat - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="./index.html">Chat</a><br/>
+<br/>
+<h1>Chat</h1>
+<code><span class="keyword">interface </span><span class="identifier">Chat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-chat-event-handler.html"><span class="identifier">ChatEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.error_handling/-error-handler/index.html"><span class="identifier">ErrorHandler</span></a></code>
+<p>Abstraction of the chat. Holds the event handlers, error handler, and javascript actions.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-configuration/index.html">Configuration</a></h4>
+</td>
+<td>
+<p>Class to configure the chat.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="is-ready.html">isReady</a></h4>
+</td>
+<td>
+<p>This variable represents that the chat has been loaded and ready to evaluate javascripts.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">isReady</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="check-widget-availability.html">checkWidgetAvailability</a></h4>
+</td>
+<td>
+<p>Check the current widget availability</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">checkWidgetAvailability</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.chat.sdk.networking/-widget-availability/index.html"><span class="identifier">WidgetAvailability</span></a></code>
+<p>Check widget availability</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">checkWidgetAvailability</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.Chat$checkWidgetAvailability(kotlin.String)/widgetId">widgetId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.chat.sdk.networking/-widget-availability/index.html"><span class="identifier">WidgetAvailability</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="clear-all-cookies.html">clearAllCookies</a></h4>
+</td>
+<td>
+<p>Clears the cookies, when the view is ready.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">clearAllCookies</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.Chat$clearAllCookies(android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hide-button.html">hideButton</a></h4>
+</td>
+<td>
+<p>Hides the chat button, when the view is ready.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">hideButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.Chat$hideButton(android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reload.html">reload</a></h4>
+</td>
+<td>
+<p>Reloads the current chat.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">reload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-configuration.html">setConfiguration</a></h4>
+</td>
+<td>
+<p>Setter to load a specific configuration to this View.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setConfiguration</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.Chat$setConfiguration(com.chat.sdk.Chat.Configuration)/configuration">configuration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Configuration</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-show-file-chooser-listener.html">setShowFileChooserListener</a></h4>
+</td>
+<td>
+<p>Set file chooser listener (for file upload)</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setShowFileChooserListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.Chat$setShowFileChooserListener(com.chat.sdk.ShowFileChooserListener)/showFileChooserListener">showFileChooserListener</span><span class="symbol">:</span>&nbsp;<a href="../-show-file-chooser-listener/index.html"><span class="identifier">ShowFileChooserListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="show-button.html">showButton</a></h4>
+</td>
+<td>
+<p>Show the chat button, when the view is ready.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">showButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.Chat$showButton(android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-link.html">startLink</a></h4>
+</td>
+<td>
+<p>Shows the chat view, when the view is ready.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">startLink</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.Chat$startLink(android.webkit.ValueCallback((kotlin.String)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/ValueCallback.html"><span class="identifier">ValueCallback</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../clear-all-cookies.html">clearAllCookies</a></h4>
+</td>
+<td>
+<p>Clears the cookies, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">clearAllCookies</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$clearAllCookies(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../hide-button.html">hideButton</a></h4>
+</td>
+<td>
+<p>Hides the chat button, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">hideButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$hideButton(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../show-button.html">showButton</a></h4>
+</td>
+<td>
+<p>Show the chat button, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">showButton</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$showButton(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../start-link.html">startLink</a></h4>
+</td>
+<td>
+<p>Shows the chat view, when the view is ready.</p>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Chat</span></a><span class="symbol">.</span><span class="identifier">startLink</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk$startLink(com.chat.sdk.Chat, kotlin.Function1((kotlin.String, kotlin.Unit)))/resultCallback">resultCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-chat-view/index.html">ChatView</a></h4>
+</td>
+<td>
+<p>Wrapper view that hides the real implementation from the user and prevent to do any change on it.</p>
+<code><span class="keyword">class </span><span class="identifier">ChatView</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/widget/FrameLayout.html"><span class="identifier">FrameLayout</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Chat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-chat-web-view/index.html">ChatWebView</a></h4>
+</td>
+<td>
+<p>Internal view that responsible for to display the chat and the communication between the javascript library and the android app with bridge objects. Also delegates the events to the corresponding objects.</p>
+<code><span class="keyword">class </span><span class="identifier">ChatWebView</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebView.html"><span class="identifier">WebView</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Chat</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NotifiableErrorHandlerImpl - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk.error_handling</a>&nbsp;/&nbsp;<a href="./index.html">NotifiableErrorHandlerImpl</a><br/>
+<br/>
+<h1>NotifiableErrorHandlerImpl</h1>
+<code><span class="keyword">internal</span> <span class="keyword">class </span><span class="identifier">NotifiableErrorHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-notifiable-error-handler/index.html"><span class="identifier">NotifiableErrorHandler</span></a></code>
+<p>Implementation of the error handler.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Implementation of the error handler.</p>
+<code><span class="identifier">NotifiableErrorHandlerImpl</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="listeners.html">listeners</a></h4>
+</td>
+<td>
+<p>Lists of the registered ErrorListeners.</p>
+<code><span class="keyword">val </span><span class="identifier">listeners</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../-error-listener/index.html"><span class="identifier">ErrorListener</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-error-listener.html">addErrorListener</a></h4>
+</td>
+<td>
+<p>Adds the given ErrorListener to this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addErrorListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.error_handling.NotifiableErrorHandlerImpl$addErrorListener(com.chat.sdk.error_handling.ErrorListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-error-listener/index.html"><span class="identifier">ErrorListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="notify-internal-error.html">notifyInternalError</a></h4>
+</td>
+<td>
+<p>Invokes the registered listeners with the given internal exception</p>
+<code><span class="keyword">fun </span><span class="identifier">notifyInternalError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.error_handling.NotifiableErrorHandlerImpl$notifyInternalError(com.chat.sdk.error_handling.InternalException)/internalError">internalError</span><span class="symbol">:</span>&nbsp;<a href="../-internal-exception/index.html"><span class="identifier">InternalException</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="notify-network-error.html">notifyNetworkError</a></h4>
+</td>
+<td>
+<p>Invokes the registered listeners with the given network exception</p>
+<code><span class="keyword">fun </span><span class="identifier">notifyNetworkError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.error_handling.NotifiableErrorHandlerImpl$notifyNetworkError(com.chat.sdk.error_handling.NetworkException)/networkException">networkException</span><span class="symbol">:</span>&nbsp;<a href="../-network-exception/index.html"><span class="identifier">NetworkException</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-error-listener.html">removeErrorListener</a></h4>
+</td>
+<td>
+<p>Removes the given ErrorListener from this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeErrorListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.error_handling.NotifiableErrorHandlerImpl$removeErrorListener(com.chat.sdk.error_handling.ErrorListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-error-listener/index.html"><span class="identifier">ErrorListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StartChatEventHandlerImpl - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk.events.start_chat</a>&nbsp;/&nbsp;<a href="./index.html">StartChatEventHandlerImpl</a><br/>
+<br/>
+<h1>StartChatEventHandlerImpl</h1>
+<code><span class="keyword">internal</span> <span class="keyword">class </span><span class="identifier">StartChatEventHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events/-event-handler/index.html"><span class="identifier">EventHandler</span></a><span class="symbol">&lt;</span><a href="../-start-chat-event-listener/index.html"><span class="identifier">StartChatEventListener</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="../-bridge-start-chat-event-handler/index.html"><span class="identifier">BridgeStartChatEventHandler</span></a></code>
+<p>Implementation of the start chat event handler.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Implementation of the start chat event handler.</p>
+<code><span class="identifier">StartChatEventHandlerImpl</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-start-chat-listener.html">addStartChatListener</a></h4>
+</td>
+<td>
+<p>Adds the given StartChatListener to this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addStartChatListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.start_chat.StartChatEventHandlerImpl$addStartChatListener(com.chat.sdk.events.start_chat.StartChatEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-start-chat-event-listener/index.html"><span class="identifier">StartChatEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-start-chat.html">onStartChat</a></h4>
+</td>
+<td>
+<p>Bridge method where the data comes from Javascript. It posted to all listeners on the main thread.</p>
+<code><span class="keyword">fun </span><span class="identifier">onStartChat</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.start_chat.StartChatEventHandlerImpl$onStartChat(kotlin.String, kotlin.String, kotlin.String)/email">email</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.events.start_chat.StartChatEventHandlerImpl$onStartChat(kotlin.String, kotlin.String, kotlin.String)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.events.start_chat.StartChatEventHandlerImpl$onStartChat(kotlin.String, kotlin.String, kotlin.String)/type">type</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-start-chat-listener.html">removeStartChatListener</a></h4>
+</td>
+<td>
+<p>Removes the given StartChatListener from this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeStartChatListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.start_chat.StartChatEventHandlerImpl$removeStartChatListener(com.chat.sdk.events.start_chat.StartChatEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-start-chat-event-listener/index.html"><span class="identifier">StartChatEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

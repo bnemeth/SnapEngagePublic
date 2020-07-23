@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChatWebViewClient.onReceivedError - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="index.html">ChatWebViewClient</a>&nbsp;/&nbsp;<a href="./on-received-error.html">onReceivedError</a><br/>
+<br/>
+<h1>onReceivedError</h1>
+<a name="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, android.webkit.WebResourceRequest, android.webkit.WebResourceError)"></a>
+<code><span class="keyword">fun </span><span class="identifier">onReceivedError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, android.webkit.WebResourceRequest, android.webkit.WebResourceError)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebView.html"><span class="identifier">WebView</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, android.webkit.WebResourceRequest, android.webkit.WebResourceError)/request">request</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebResourceRequest.html"><span class="identifier">WebResourceRequest</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, android.webkit.WebResourceRequest, android.webkit.WebResourceError)/error">error</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebResourceError.html"><span class="identifier">WebResourceError</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>A callback that triggers if an error occured. Used in API level 23 and higher.</p>
+<h3>Parameters</h3>
+<p><a name="view"></a>
+<code>view</code> - The WebView that is initiating the callback.</p>
+<p><a name="request"></a>
+<code>request</code> - The originating request.</p>
+<p><a name="error"></a>
+<code>error</code> - Information about the error occurred.</p>
+<a name="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, kotlin.Int, kotlin.String, kotlin.String)"></a>
+<code><span class="keyword">fun </span><span class="identifier">onReceivedError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, kotlin.Int, kotlin.String, kotlin.String)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/webkit/WebView.html"><span class="identifier">WebView</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, kotlin.Int, kotlin.String, kotlin.String)/errorCode">errorCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, kotlin.Int, kotlin.String, kotlin.String)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.chat.sdk.ChatWebViewClient$onReceivedError(android.webkit.WebView, kotlin.Int, kotlin.String, kotlin.String)/failingUrl">failingUrl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>A callback that triggers if an error occured. Used under API level 23.</p>
+<h3>Parameters</h3>
+<p><a name="view"></a>
+<code>view</code> - The WebView that is initiating the callback.</p>
+<p><a name="errorCode"></a>
+<code>errorCode</code> - The error code corresponding to an ERROR_* value.</p>
+<p><a name="description"></a>
+<code>description</code> - A String describing the error.</p>
+<p><a name="failingUrl"></a>
+<code>failingUrl</code> - The url that failed to load.</p>
+<a name="com.chat.sdk.ChatWebViewClient$onReceivedError"></a>
+<code><span class="keyword">private</span> <span class="keyword">val </span><span class="identifier">onReceivedError</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Closure that will be invoked after an error occurred.</p>
+<h3>Property</h3>
+<p><a name="onReceivedError"></a>
+<code>onReceivedError</code> - Closure that will be invoked after an error occurred.</p>
+</BODY>
+</HTML>

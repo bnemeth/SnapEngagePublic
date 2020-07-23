@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BridgeChatEventHandler - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="./index.html">BridgeChatEventHandler</a><br/>
+<br/>
+<h1>BridgeChatEventHandler</h1>
+<code><span class="keyword">interface </span><span class="identifier">BridgeChatEventHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-chat-event-handler.html"><span class="identifier">ChatEventHandler</span></a></code>
+<p>Abstraction of a centralized chat event handler which extends all the event handlers.
+Also register and unregister javascript bridges.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="register-js-interfaces.html">registerJsInterfaces</a></h4>
+</td>
+<td>
+<p>This method registers all the internal bridge objects</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">registerJsInterfaces</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandler$registerJsInterfaces(kotlin.Function2((kotlin.Any, kotlin.String, kotlin.Unit)))/registerHandler">registerHandler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="unregister-js-interfaces.html">unregisterJsInterfaces</a></h4>
+</td>
+<td>
+<p>This method unregisters all the internal bridge objects</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">unregisterJsInterfaces</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandler$unregisterJsInterfaces(kotlin.Function1((kotlin.String, kotlin.Unit)))/unregisterHandler">unregisterHandler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-bridge-chat-event-handler-impl/index.html">BridgeChatEventHandlerImpl</a></h4>
+</td>
+<td>
+<p>Implementation of a centralized event handler holder.</p>
+<code><span class="keyword">class </span><span class="identifier">BridgeChatEventHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BridgeChatEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.close/-close-event-handler/index.html"><span class="identifier">CloseEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.chat_message_received/-chat-message-received-event-handler/index.html"><span class="identifier">ChatMessageReceivedEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.button/-button-event-handler/index.html"><span class="identifier">ButtonEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-handler/index.html"><span class="identifier">ChatMessageSentEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.message_submit/-message-submit-event-handler/index.html"><span class="identifier">MessageSubmitEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.minimize/-minimize-event-handler/index.html"><span class="identifier">MinimizeEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.open/-open-event-handler/index.html"><span class="identifier">OpenEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.open_proactive/-open-proactive-event-handler/index.html"><span class="identifier">OpenProactiveEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.start_callme/-start-callme-event-handler/index.html"><span class="identifier">StartCallmeEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.start_chat/-start-chat-event-handler/index.html"><span class="identifier">StartChatEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.switch_widget/-switch-widget-event-handler/index.html"><span class="identifier">SwitchWidgetEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.ready/-ready-event-handler/index.html"><span class="identifier">ReadyEventHandler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

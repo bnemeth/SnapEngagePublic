@@ -1,0 +1,11 @@
+-keep interface * { *; }
+-keep class * { @android.webkit.JavascriptInterface <methods>;<fields>; }
+-keep class com.chat.sdk.ChatView { <methods>; }
+-keep class com.chat.sdk.CustomVariables
+-keep class com.chat.sdk.Chat$Configuration
+-keep class com.chat.sdk.error_handling.AbstractErrorListener
+-keep class com.chat.sdk.error_handling.InternalException
+-keep class com.chat.sdk.error_handling.InvalidConfigurationException
+-keep class com.chat.sdk.error_handling.NetworkException
+-keep class com.chat.sdk.error_handling.WidgetAvailabilityException
+-keep class com.chat.sdk.networking.WidgetAvailability

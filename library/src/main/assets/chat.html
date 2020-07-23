@@ -1,0 +1,80 @@
+<html>
+<header>
+</header>
+<body>
+[customVariables]
+<script type="text/javascript">
+            function addcss(css, document) {
+                document = document || window.document;
+
+                var head = document.getElementsByTagName('head')[0],
+                    s = document.createElement('style');
+                s.setAttribute('type', 'text/css');
+                if (s.styleSheet) { // IE
+                    s.styleSheet.cssText = css;
+                } else {
+                    s.appendChild(document.createTextNode(css));
+                }
+                head.appendChild(s);
+            }
+          (function() {
+            var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+            se.src = '[jsUrl]';
+            var done = false;
+            se.onload = se.onreadystatechange = function() {
+              if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
+                done = true;
+                [provider].setCallback('Close', function (type, status) {
+                    CloseEventHandlerImpl.onClose(type, status);
+                });
+                [provider].setCallback('ChatMessageReceived', function (agent, msg) {
+                    ChatMessageReceivedEventHandlerImpl.onChatMessageReceived(agent, msg);
+                });
+                [provider].setCallback('ChatMessageSent', function (msg) {
+                    ChatMessageSentEventHandlerImpl.onChatMessageSent(msg);
+                });
+                [provider].setCallback('MessageSubmit', function (email, msg) {
+                    MessageSubmitEventHandlerImpl.onMessageSubmit(email, msg);
+                });
+                [provider].setCallback('Minimize', function (isMinimized, chatType, boxType) {
+                    MinimizeEventHandlerImpl.onMinimize(isMinimized, chatType, boxType);
+                });
+                [provider].setCallback('Open', function (status) {
+                    var iframe = document.getElementById('designstudio-iframe'),
+                            iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+                    addcss('html #main-mobile { height:100%!important; width:100% !important; margin:0}', iframeDocument);
+
+                    OpenEventHandlerImpl.onOpen(status);
+                });
+                [provider].setCallback('OpenProactive', function (agent, msg) {
+                    OpenProactiveEventHandlerImpl.onOpenProactive(agent, msg);
+                });
+                [provider].setCallback('StartChat', function (email, msg, type) {
+                    StartChatEventHandlerImpl.onStartChat(email, msg, type);
+                });
+                [provider].setCallback('StartCallme', function (phone) {
+                    StartCallmeEventHandlerImpl.onStartCallMe(phone);
+                });
+                [provider].setCallback('SwitchWidget', function (newWidgetId) {
+                    SwitchWidgetEventHandlerImpl.onSwitchWidget(newWidgetId);
+                });
+                [provider].setCallback('InlineButtonClicked', function (options) {
+                    ButtonEventHandlerImpl.onButtonEvent(options.botName, options.buttonLabel, options.buttonValue);
+                });
+
+                [provider].allowProactiveChat(false);
+
+                var iframe = document.getElementById('designstudio-iframe'),
+                            iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+                addcss('html #main-mobile { height:100%!important; width:100% !important; margin:0}', iframeDocument);
+
+                ReadyEventHandlerImpl.onReady();
+              }
+            };
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+          })();
+</script>
+</body>
+</html>

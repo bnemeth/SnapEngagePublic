@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">SnapEngage</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="chat">My Test App</string>
+    <string name="chat_configuration">Chat Configuration</string>
+    <string name="provider">Provider</string>
+    <string name="provider_snapengage">SnapEngage</string>
+    <string name="base_javascript_url">Base javascript url</string>
+    <string name="base_javascript_url_snapengage">https://storage.googleapis.com/code.snapengage.com/js</string>
+    <string name="save">Save</string>
+    <string name="custom_variables">Custom variables</string>
+    <string name="clear_cookies">clear cookies</string>
+    <string name="show_configuration">show configuration</string>
+    <string name="remove">Remove</string>
+    <string name="retry">retry</string>
+    <string name="clear_log">clear log</string>
+    <string name="show_logs">show logs</string>
+    <string name="hide_logs">hide logs</string>
+    <string name="entry_page_url">Entry page url</string>
+    <string name="entry_page_url_example">https://example.com</string>
+
+    <string name="widget_id">WidgetId</string>
+    <string name="widget_id_snapengage">8e01c706-fb83-42b6-a96e-ec03bf2cab5c</string>
+
+
+    <string name="base_instance_url">Base instance url</string>
+    <string name="base_instance_url_snapengage">https://www.snapengage.com/public/api/v2/chat</string>
+</resources>

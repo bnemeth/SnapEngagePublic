@@ -1,0 +1,87 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'maven-publish'
+apply plugin: 'org.jetbrains.dokka'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFile('consumer-rules.pro')
+        }
+    }
+
+    dokka {
+        outputFormat = 'html'
+        outputDirectory = "$rootDir/library/documentation"
+
+        configuration {
+            includeNonPublic = true
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // webview inflate bug in appcompat (developer must support this or higher versions of appcompat):
+    // https://stackoverflow.com/questions/41025200/android-view-inflateexception-error-inflating-class-android-webkit-webview
+    implementation 'androidx.appcompat:appcompat:1.2.0-beta01'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.25.1'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier "sources"
+}
+
+publishing {
+    publications {
+        publish(MavenPublication) {
+            groupId 'com.chat'
+            artifactId 'sdk'
+            version '0.4'
+            //artifact(sourceJar)
+            artifact("$buildDir/outputs/aar/library-release.aar")
+        }
+    }
+    repositories {
+        maven {
+            credentials  {
+                username = "balazs.nemeth"
+                password = "12345"
+            }
+            url "https://nexus.attrecto-dev.com/repository/attrecto-releases"
+            authentication {
+                basic(BasicAuthentication)
+            }
+
+        }
+    }
+}
+
+// Ha nem megy, akkor használd ugyanazt a java-t, amit az android studio használ
+// ./gradlew clean build publish

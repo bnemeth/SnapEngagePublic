@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BridgeChatEventHandlerImpl - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk</a>&nbsp;/&nbsp;<a href="./index.html">BridgeChatEventHandlerImpl</a><br/>
+<br/>
+<h1>BridgeChatEventHandlerImpl</h1>
+<code><span class="keyword">internal</span> <span class="keyword">class </span><span class="identifier">BridgeChatEventHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-bridge-chat-event-handler/index.html"><span class="identifier">BridgeChatEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.close/-close-event-handler/index.html"><span class="identifier">CloseEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.chat_message_received/-chat-message-received-event-handler/index.html"><span class="identifier">ChatMessageReceivedEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.button/-button-event-handler/index.html"><span class="identifier">ButtonEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.chat_message_sent/-chat-message-sent-event-handler/index.html"><span class="identifier">ChatMessageSentEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.message_submit/-message-submit-event-handler/index.html"><span class="identifier">MessageSubmitEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.minimize/-minimize-event-handler/index.html"><span class="identifier">MinimizeEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.open/-open-event-handler/index.html"><span class="identifier">OpenEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.open_proactive/-open-proactive-event-handler/index.html"><span class="identifier">OpenProactiveEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.start_callme/-start-callme-event-handler/index.html"><span class="identifier">StartCallmeEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.start_chat/-start-chat-event-handler/index.html"><span class="identifier">StartChatEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.switch_widget/-switch-widget-event-handler/index.html"><span class="identifier">SwitchWidgetEventHandler</span></a><span class="symbol">, </span><a href="../../com.chat.sdk.events.ready/-ready-event-handler/index.html"><span class="identifier">ReadyEventHandler</span></a></code>
+<p>Implementation of a centralized event handler holder.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Implementation of a centralized event handler holder.</p>
+<code><span class="identifier">BridgeChatEventHandlerImpl</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/closeEventHandler">closeEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.close/-bridge-close-event-handler/index.html"><span class="identifier">BridgeCloseEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;CloseEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/chatMessageReceivedEventHandler">chatMessageReceivedEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.chat_message_received/-bridge-chat-message-received-event-handler/index.html"><span class="identifier">BridgeChatMessageReceivedEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ChatMessageReceivedEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/buttonEventHandler">buttonEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.button/-bridge-button-event-handler/index.html"><span class="identifier">BridgeButtonEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ButtonEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/chatMessageSentEventHandler">chatMessageSentEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.chat_message_sent/-bridge-chat-message-sent-event-handler/index.html"><span class="identifier">BridgeChatMessageSentEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ChatMessageSentEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/messageSubmitEventHandler">messageSubmitEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.message_submit/-bridge-message-submit-event-handler/index.html"><span class="identifier">BridgeMessageSubmitEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MessageSubmitEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/minimizeEventHandler">minimizeEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.minimize/-bridge-minimize-event-handler/index.html"><span class="identifier">BridgeMinimizeEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MinimizeEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/openEventHandler">openEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.open/-bridge-open-event-handler/index.html"><span class="identifier">BridgeOpenEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;OpenEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/openProactiveEventHandler">openProactiveEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.open_proactive/-bridge-open-proactive-event-handler/index.html"><span class="identifier">BridgeOpenProactiveEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;OpenProactiveEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/startCallmeEventHandler">startCallmeEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.start_callme/-bridge-start-callme-event-handler/index.html"><span class="identifier">BridgeStartCallmeEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;StartCallmeEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/startChatEventHandler">startChatEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.start_chat/-bridge-start-chat-event-handler/index.html"><span class="identifier">BridgeStartChatEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;StartChatEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/switchWidgetEventHandler">switchWidgetEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.switch_widget/-bridge-switch-widget-event-handler/index.html"><span class="identifier">BridgeSwitchWidgetEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SwitchWidgetEventHandlerImpl()<span class="symbol">, </span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$<init>(com.chat.sdk.events.close.BridgeCloseEventHandler, com.chat.sdk.events.chat_message_received.BridgeChatMessageReceivedEventHandler, com.chat.sdk.events.button.BridgeButtonEventHandler, com.chat.sdk.events.chat_message_sent.BridgeChatMessageSentEventHandler, com.chat.sdk.events.message_submit.BridgeMessageSubmitEventHandler, com.chat.sdk.events.minimize.BridgeMinimizeEventHandler, com.chat.sdk.events.open.BridgeOpenEventHandler, com.chat.sdk.events.open_proactive.BridgeOpenProactiveEventHandler, com.chat.sdk.events.start_callme.BridgeStartCallmeEventHandler, com.chat.sdk.events.start_chat.BridgeStartChatEventHandler, com.chat.sdk.events.switch_widget.BridgeSwitchWidgetEventHandler, com.chat.sdk.events.ready.BridgeReadyEventHandler)/readyEventHandler">readyEventHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events.ready/-bridge-ready-event-handler/index.html"><span class="identifier">BridgeReadyEventHandler</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ReadyEventHandlerImpl()<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="button-event-handler.html">buttonEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen button events.</p>
+<code><span class="keyword">val </span><span class="identifier">buttonEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.button/-bridge-button-event-handler/index.html"><span class="identifier">BridgeButtonEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="chat-message-received-event-handler.html">chatMessageReceivedEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen for chat message received events.</p>
+<code><span class="keyword">val </span><span class="identifier">chatMessageReceivedEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.chat_message_received/-bridge-chat-message-received-event-handler/index.html"><span class="identifier">BridgeChatMessageReceivedEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="chat-message-sent-event-handler.html">chatMessageSentEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen chat message sent events.</p>
+<code><span class="keyword">val </span><span class="identifier">chatMessageSentEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.chat_message_sent/-bridge-chat-message-sent-event-handler/index.html"><span class="identifier">BridgeChatMessageSentEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close-event-handler.html">closeEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen for close events.</p>
+<code><span class="keyword">val </span><span class="identifier">closeEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.close/-bridge-close-event-handler/index.html"><span class="identifier">BridgeCloseEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handlers.html">handlers</a></h4>
+</td>
+<td>
+<p>list of all handlers</p>
+<code><span class="keyword">val </span><span class="identifier">handlers</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="message-submit-event-handler.html">messageSubmitEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen message submit events.</p>
+<code><span class="keyword">val </span><span class="identifier">messageSubmitEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.message_submit/-bridge-message-submit-event-handler/index.html"><span class="identifier">BridgeMessageSubmitEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="minimize-event-handler.html">minimizeEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen minimize events.</p>
+<code><span class="keyword">val </span><span class="identifier">minimizeEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.minimize/-bridge-minimize-event-handler/index.html"><span class="identifier">BridgeMinimizeEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-event-handler.html">openEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen open events.</p>
+<code><span class="keyword">val </span><span class="identifier">openEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.open/-bridge-open-event-handler/index.html"><span class="identifier">BridgeOpenEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-proactive-event-handler.html">openProactiveEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen open proactive events.</p>
+<code><span class="keyword">val </span><span class="identifier">openProactiveEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.open_proactive/-bridge-open-proactive-event-handler/index.html"><span class="identifier">BridgeOpenProactiveEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ready-event-handler.html">readyEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen ready events.</p>
+<code><span class="keyword">val </span><span class="identifier">readyEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.ready/-bridge-ready-event-handler/index.html"><span class="identifier">BridgeReadyEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-callme-event-handler.html">startCallmeEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen start call me events.</p>
+<code><span class="keyword">val </span><span class="identifier">startCallmeEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.start_callme/-bridge-start-callme-event-handler/index.html"><span class="identifier">BridgeStartCallmeEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-chat-event-handler.html">startChatEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen start chat events.</p>
+<code><span class="keyword">val </span><span class="identifier">startChatEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.start_chat/-bridge-start-chat-event-handler/index.html"><span class="identifier">BridgeStartChatEventHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="switch-widget-event-handler.html">switchWidgetEventHandler</a></h4>
+</td>
+<td>
+<p>bridge object to listen switch widget events.</p>
+<code><span class="keyword">val </span><span class="identifier">switchWidgetEventHandler</span><span class="symbol">: </span><a href="../../com.chat.sdk.events.switch_widget/-bridge-switch-widget-event-handler/index.html"><span class="identifier">BridgeSwitchWidgetEventHandler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="register-js-interfaces.html">registerJsInterfaces</a></h4>
+</td>
+<td>
+<p>This method registers all the internal bridge objects</p>
+<code><span class="keyword">fun </span><span class="identifier">registerJsInterfaces</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$registerJsInterfaces(kotlin.Function2((kotlin.Any, kotlin.String, kotlin.Unit)))/registerHandler">registerHandler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="unregister-js-interfaces.html">unregisterJsInterfaces</a></h4>
+</td>
+<td>
+<p>This method unregisters all the internal bridge objects</p>
+<code><span class="keyword">fun </span><span class="identifier">unregisterJsInterfaces</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.BridgeChatEventHandlerImpl$unregisterJsInterfaces(kotlin.Function1((kotlin.String, kotlin.Unit)))/unregisterHandler">unregisterHandler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AbstractErrorListener - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk.error_handling</a>&nbsp;/&nbsp;<a href="./index.html">AbstractErrorListener</a><br/>
+<br/>
+<h1>AbstractErrorListener</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractErrorListener</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-error-listener/index.html"><span class="identifier">ErrorListener</span></a></code>
+<p>Abstraction of the error handler.
+Empty implementation of ErrorListener. Useful if you do not want to handle all the errors.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Abstraction of the error handler.
+Empty implementation of ErrorListener. Useful if you do not want to handle all the errors.</p>
+<code><span class="identifier">AbstractErrorListener</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="on-internal-error.html">onInternalError</a></h4>
+</td>
+<td>
+<p>This event fires if the SDK cannot load the chat internally.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onInternalError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.error_handling.AbstractErrorListener$onInternalError(com.chat.sdk.error_handling.InternalException)/internalException">internalException</span><span class="symbol">:</span>&nbsp;<a href="../-internal-exception/index.html"><span class="identifier">InternalException</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-network-error.html">onNetworkError</a></h4>
+</td>
+<td>
+<p>This event fires when a network load error occurred.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onNetworkError</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.error_handling.AbstractErrorListener$onNetworkError(com.chat.sdk.error_handling.NetworkException)/networkException">networkException</span><span class="symbol">:</span>&nbsp;<a href="../-network-exception/index.html"><span class="identifier">NetworkException</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

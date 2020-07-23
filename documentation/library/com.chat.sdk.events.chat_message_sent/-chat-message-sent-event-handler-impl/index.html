@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChatMessageSentEventHandlerImpl - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">com.chat.sdk.events.chat_message_sent</a>&nbsp;/&nbsp;<a href="./index.html">ChatMessageSentEventHandlerImpl</a><br/>
+<br/>
+<h1>ChatMessageSentEventHandlerImpl</h1>
+<code><span class="keyword">internal</span> <span class="keyword">class </span><span class="identifier">ChatMessageSentEventHandlerImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.chat.sdk.events/-event-handler/index.html"><span class="identifier">EventHandler</span></a><span class="symbol">&lt;</span><a href="../-chat-message-sent-event-listener/index.html"><span class="identifier">ChatMessageSentEventListener</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="../-bridge-chat-message-sent-event-handler/index.html"><span class="identifier">BridgeChatMessageSentEventHandler</span></a></code>
+<p>Implementation of the chat message sent event handler.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Implementation of the chat message sent event handler.</p>
+<code><span class="identifier">ChatMessageSentEventHandlerImpl</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-chat-message-sent-listener.html">addChatMessageSentListener</a></h4>
+</td>
+<td>
+<p>Adds the given ChatMessageSentEventListener to this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">addChatMessageSentListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.chat_message_sent.ChatMessageSentEventHandlerImpl$addChatMessageSentListener(com.chat.sdk.events.chat_message_sent.ChatMessageSentEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-chat-message-sent-event-listener/index.html"><span class="identifier">ChatMessageSentEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-chat-message-sent.html">onChatMessageSent</a></h4>
+</td>
+<td>
+<p>Bridge method where the data comes from Javascript. It posted to all listeners on the main thread.</p>
+<code><span class="keyword">fun </span><span class="identifier">onChatMessageSent</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.chat_message_sent.ChatMessageSentEventHandlerImpl$onChatMessageSent(kotlin.String)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-chat-message-sent-listener.html">removeChatMessageSentListener</a></h4>
+</td>
+<td>
+<p>Removes the given ChatMessageSentEventListener from this handler.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeChatMessageSentListener</span><span class="symbol">(</span><span class="identifier" id="com.chat.sdk.events.chat_message_sent.ChatMessageSentEventHandlerImpl$removeChatMessageSentListener(com.chat.sdk.events.chat_message_sent.ChatMessageSentEventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-chat-message-sent-event-listener/index.html"><span class="identifier">ChatMessageSentEventListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
